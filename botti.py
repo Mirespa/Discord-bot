@@ -14,7 +14,7 @@ client = Client(intents=intents) # Create a client instance with the specified i
 
 async def send_response(message: Message) -> None: # Function to send a response
     try:
-        response: str = get_responses(message.content) # Get the response based on the message content
+        response: str = await get_responses(message.content) # Get the response based on the message content
         await message.channel.send(response) # Send the response
     except Exception as e:
         print(e)
