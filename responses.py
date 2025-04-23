@@ -1,6 +1,7 @@
 import os
 import aiohttp
 from dotenv import load_dotenv
+from calendar_auth import get_three_days_events
 
 load_dotenv() # Load environment variables from .env file
 WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
@@ -13,6 +14,8 @@ async def get_responses(user_input: str) -> str: # Function to get responses bas
         return "Hello!"
     elif "weather" in lowered:
         return await fetch_weather("Turku")
+    elif "calendar" in lowered:
+        return get_three_days_events()
     else:
         return "I don't understand what you mean."
     
