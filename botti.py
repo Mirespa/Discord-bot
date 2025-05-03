@@ -30,6 +30,7 @@ async def on_message(message: Message) -> None: # Function to handle incoming me
     if message.author == client.user: # Ignore messages from the bot itself
         return
     
+    # Debugging information
     username: str = str(message.author)
     user_message: str = str(message.content)
     channel: str = str(message.channel)
