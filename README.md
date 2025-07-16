@@ -1,6 +1,7 @@
 # Discord Bot
 
-"Personal assistant" style discord bot 
+"Personal assistant" style discord bot.
+
 It supports modular logic, responds to user messages, and includes optional integration with services like Google Calendar and weather APIs.
 
 ## Features
